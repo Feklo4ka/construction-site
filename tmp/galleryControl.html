@@ -1,0 +1,29 @@
+<ul class="nav nav-tabs">
+    <li><a href="admin">Обратный звонок</a></li>
+    <li><a href="feedback">Обратная связь</a></li>
+    <li class="active"><a href="galleryControl">Управление галереей</a></li>
+    <li><a href="calc">Управление ценами</a></li>
+    <li><button class="btn btn-secondary"><a href="exit">Выход</a></button></li>
+</ul>
+
+<div class="container">
+    <div class="text-center button"><a href="addGallery">Добавить Галерею</a></div>
+</div>
+
+<div class="container galleryControl">
+    <div class="row">
+       <? foreach ($galleryList as $galleryItem):?>
+        <div class="col=xs-12 col-md-4 galleryItem">
+           <p><?=$galleryItem['name']?></p>
+           
+           <p class="yellow"><? if ($galleryItem['is_published']==2): ?> Черновик <?endif?>&nbsp;</p>
+           
+            <a href="/construction/editGallery?id=<?=$galleryItem['id']?>"><img src="/construction/<?=$galleryItem['cover_img']?>"></a>
+            <div>
+                <a class="btn btn-link" href="/construction/editGallery?id=<?=$galleryItem['id']?>"><i class="fa fa-pencil"></i> Редактировать</a>
+                <a class="btn btn-link" href="/construction/delGallery?id=<?=$galleryItem['id']?>"><i class="fa fa-trash"></i> Удалить</a>            
+            </div>
+        </div>
+        <?endforeach?>
+    </div>
+</div>

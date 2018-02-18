@@ -1,0 +1,31 @@
+<div class="container-fluid">                 
+
+    <div class="row">
+        <div class="col-xs-12 img-wrap">            
+            <img src="img/services.jpg">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 col-md-offset-4 page-name">            
+            <span>Галерея</span>
+        </div>
+    </div>
+</div>
+
+<div class="projects-gallery">
+    <div class="container">
+        <h2>Наши работы</h2>
+        <div class="row">
+            <? foreach ($gallery as $galleryItem):?>
+            <div class="col-xs-6 col-md-3 project">
+                <a href="/construction/galleryImg?id=<?=$galleryItem['id']?>">
+
+                    <img src="/construction/<?=$galleryItem['cover_img']?>">
+                    <span class="project-name"><?=$galleryItem['name']?></span>
+
+                </a>
+            </div>
+            <?endforeach?>
+        </div>
+    </div>
+</div>

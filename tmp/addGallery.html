@@ -1,0 +1,17 @@
+<div class="addGalleryForm">
+    <form method="post" action="addGallery" enctype="multipart/form-data">
+        <p> Название галереи: <input type="text" name="name"></p>
+        <br>
+        <p>Заглавная картинка: <input type="file" name="firstFoto" ></p>        
+        <br>
+        <p>Добавить картинки: <input type="file" name="foto[]" multiple></p>
+        <p>Статус галереи:</p> 
+        <select  size="1" name="status">
+            <option value="1">Опубликовать</option>
+            <option value="2">Черновик</option>
+        </select>
+        <br>
+        <input class="submit" type="submit" value="Создать галерею">
+
+    </form>
+</div>

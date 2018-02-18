@@ -1,0 +1,29 @@
+<div class="editGallery">
+    <h2>Редактировать галерею</h2>
+    <form enctype="multipart/form-data" action="/construction/editGallery" method="post">
+        <p>Название галереи</p>
+        <input type="text" name="name" value="<?=$galleryRow['name']?>">
+        <p>Добавить картинки</p>
+        <input type="file" multiply name="images[]">
+        <p>Статус галереи</p>
+        <select size="1" name="status">
+            <option value="1" <?= ($galleryRow['is_published']==1)?"selected":"" ?>>Опубликовать</option>
+            <option value="2" <?= ($galleryRow['is_published']==2)?"selected":"" ?>>Черновик</option>
+        </select>
+        <p>Выбрать картинки для удаления</p>
+        <div class="container">
+            <div class="rows">
+                <? foreach($rows as $item): ?>
+                <div class="col-md-6">
+                    <label>
+                        <input type="checkbox" name="gallery_image_delete[]" value="<?=$item['id']?>">
+                        <img src="/construction/<?=$item['path']?>">
+                    </label>
+                </div>
+                <?endforeach?>
+            </div>
+        </div>
+        <input type="hidden" name="id" value="<?= $galleryRow['id'] ?>">
+        <input type="submit" class="submit" name="editGallery" value="Сохранить">
+    </form>
+</div>

@@ -1,0 +1,30 @@
+<ul class="nav nav-tabs">
+    <li><a href="admin">Обратный звонок</a></li>
+    <li><a href="feedback">Обратная связь</a></li>
+    <li><a href="galleryControl">Управление галереей</a></li>
+    <li class="active"><a href="calc">Управление ценами</a></li>
+    <li><button class="btn btn-secondary"><a href="exit">Выход</a></button></li>
+</ul>
+
+
+<div class="cotainer calc">
+    <h2>Цены</h2>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <table class="table table-hover">
+                <tr>
+                    <th>Услуга</th>
+                    <th>Цена за м<sup>2</sup></th>
+                    <th></th>
+                    
+                </tr>
+                <? foreach ($calcList as $calcItem): ?>
+                <tr>
+                    <td><?=$calcItem['name']?></td>
+                    <td><input class="price" data-id="<?= $calcItem['id'] ?>" value="<?= $calcItem['price'] ?>" type="text" readonly /></td>
+                </tr>
+                <? endforeach; ?>
+            </table>
+        </div>
+    </div>
+</div>

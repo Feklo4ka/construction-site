@@ -1,0 +1,273 @@
+img{
+    height: 100%;
+    width: 100%;
+
+}
+.img-wrap {
+    width: 100%;
+    max-height: 500px;
+    padding: 0;
+    background-color: black;
+    overflow: hidden;
+}
+
+.img-wrap img {
+    opacity: 0.3;
+    -moz-opacity:0.3;
+    filter: alpha(opacity=30) black;
+    -khtml-opacity: 0.3;
+}
+
+.feedbackForm {
+    height: 400px;
+    border: none;
+    padding-right: 50px;
+    margin-bottom: 50px;
+}
+
+.feedbackForm input {
+    border: none;
+    border-bottom: 1px solid #9a9ca1;
+    height: 50px;
+    font-family: 'Roboto', Verdana, sans-serif;
+
+}
+.feedbackForm input:hover{
+    border-bottom: 1px solid #eeb500;
+}
+.feedbackForm .text {
+    width: 100%;
+    padding-left: 5px;
+}
+.feedbackForm textarea {
+    border: none;
+    border-bottom: 1px solid #9a9ca1;
+    font-family: 'Roboto', Verdana, sans-serif;
+    width: 100%;
+    padding-left: 5px;
+}
+.feedbackForm textarea:hover{
+    border-bottom: 1px solid #eeb500;
+}
+.feedbackForm .submit {
+    height: 30px;
+    width: 100px;
+    margin-top: 50px;
+    color: white;
+    background-color: #eeb500;
+    border: none;
+}
+.feedbackForm .submit:hover{
+    background-color: #9a9ca1;
+}
+.contact-icons-yellow{
+    margin-top: 230px;
+}
+.contact-icons-yellow a{
+    color: #eeb500;
+    font-size: 2em;
+    padding-right: 20px;
+}
+
+.page-name{
+    position: relative;
+    margin-top: -220px;
+}
+@media screen and (max-width:1000px){
+    .page-name {
+        position: relative;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+}
+.page-name span{
+    color: #eeb500;
+    font-weight: bold;
+    font-size: 3em;
+    padding-left: 40px;
+}
+.calc input {
+    margin: 10px;
+
+}
+.calc select {
+    margin: 10px;
+}
+.calc .text {
+    width: 50px;
+    height: 30px;
+}
+.calcAdditional label {
+    font-weight: 500;
+}
+.calcSubmit {
+    height: 30px;
+    width: 100px;
+    margin-top: 50px;
+    color: white;
+    background-color: #eeb500;
+    border: none;
+    margin-bottom: 20px;
+}
+.calcSubmit:hover{
+    background-color: #9a9ca1;
+
+}
+.result {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+.result span {
+    font-size: 2em;
+    color: #eeb500;
+    padding-left: 30px;
+}
+#calc-result {
+    display: none;
+
+}
+.projects-gallery {
+    width: 100%;
+}
+.projects-gallery {
+    width: 100%;
+}
+.project {
+    padding: 0;
+
+}
+
+.project img {
+    width: inherit;
+    height: inherit;
+    padding: 0;
+}
+.project a {
+    display: block; 
+    position: relative;
+    width: 277px;
+    height: 184px;
+    margin-bottom: 20px;
+}
+.project a:hover {
+    background-color:#000;
+    outline: 2px solid #eeb500;
+    outline-offset: -10px;
+}
+.project img:hover {  
+
+    opacity:0.5;
+    -moz-opacity:0.5;
+    filter: alpha(opacity=50) black;
+    -khtml-opacity: 0.5;
+
+}
+
+.project-name {
+    position: absolute;    
+    left: 15px;
+    bottom: 15px;          
+    font-weight: bold;
+    color: white;
+    opacity: 0;
+}
+.project a:hover > .project-name{
+    opacity: 1;
+}
+@media screen and (max-width:570px){
+    .project img
+    {
+        width: inherit;
+        height: inherit;
+
+    }
+    .project a {
+        width: 220px;
+        height: 150px;
+        margin-left: 15px;
+    }
+
+}
+@media screen and (min-width:990px) and (max-width:1200px){
+    .project a {
+        width: 245px;
+        height: 165px;
+        margin-bottom: 0;
+    }
+
+}
+.thumb img { 
+    filter: none; /* IE6-9 */ 
+    -webkit-filter: grayscale(0); 
+    border-radius:5px; 
+    background-color: #fff; 
+    border: 1px solid #ddd; 
+    padding:5px; 
+} 
+
+.thumb img:hover { 
+    filter: gray; /* IE6-9 */ 
+    -webkit-filter: grayscale(1); 
+} 
+
+.thumb { 
+    padding:5px; 
+} 
+.galleryImg .img-responsive {
+    height: auto;
+    max-height: 190px;
+}
+.back {
+    margin: 20px;
+
+}
+.back a {
+    color: #1b1a1a;
+    font-weight: bold;
+}
+.back a:hover {
+    color: #eeb500;
+}
+.leftImg {
+    width: 400px;
+    float:left; 
+    margin: 0 20px 20px 0;
+}
+.rightImg {
+    width: 400px;
+    float:right; 
+    margin: 0 0 20px 20px;
+}
+.servicesBlock div {
+    margin-bottom: 20px;
+    text-align: justify;
+    
+}
+.aboutUs {
+    text-align: justify;
+}
+.services-block {
+    width: 400px;
+    margin-bottom: 30px;
+    margin-right: 20px
+}
+.services-block p {
+    font-size: 0.9em;
+    text-align: justify;
+}
+.services-block img{
+    width: 400px;
+    height: 260px;
+}
+.services-block img:hover {
+    background-color: #222831;
+    opacity: 0.5;
+}
+.services-block a {
+    color: #eeb500;
+    font-family: 'Roboto', sans-serif;  
+}
+.services-block a:hover {
+    color: #76767f;
+}

@@ -1,0 +1,78 @@
+<div class="container-fluid">                 
+
+    <div class="row">
+        <div class="col-xs-12 img-wrap">            
+            <img src="img/calc.jpg">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 col-md-offset-4 page-name">            
+            <span>Цены</span>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <h2>Калькулятор цен</h2>
+        <div class="col-md-6">
+            <form class="calc" action="prices" method="post">
+                Материал стен:  <select  size="1" name="material">
+                <option value="1">Каркасный</option>
+                <option value="3">Из бруса</option>
+                <option value="2">Газобетон</option>
+                </select>
+                <br>
+                Площадь дома: <input type="text" class="text" name="square"></input> м<sup>2</sup>
+            <p>Количество этажей: <input type="radio" name="floor" value="1"> 1 
+                <input type="radio" name="floor" value="2"> 2 
+                <input type="radio" name="floor" value="3"> 3 </p>
+
+            Фундамент:  <select  size="1" name="basement">
+            <option value="4">Свайный</option>
+            <option value="6">Ленточный</option>
+            <option value="5">Монолитная плита</option>
+            </select>
+            <br>
+            Внешняя отделка:  <select  size="1" name="out-decor">
+            <option value="0">Без отделки</option>
+            <option value="7">Сайдинг</option>
+            <option value="8">Имитация бруса</option>
+            <option value="9">Имитация бревна</option>
+            <option value="10">Штукатурка</option>
+            </select>
+            <br>
+
+            Тип кровли:  <select  size="1" name="roof">
+            <option value="11">Металлочерепица</option>
+            <option value="12">Мягкая кровля</option>
+            <option value="13">Фальцевая кровля</option>        
+            </select>
+            <br>
+
+            Внутренняя отделка:  <select  size="1" name="in-decor">
+            <option value="0">Без отделки</option>
+            <option value="14">Вагонка</option>
+            <option value="15">Гипсокартон</option>        
+            </select>
+        </div>
+        <div class="col-md-6 calcAdditional">
+            <p>Дополнительно:<br>
+                <label><input type="checkbox" name="add[]" value="16"> Система отопления</label>
+                <br>
+                <label><input type="checkbox" name="add[]" value="18"> Канализация</label>
+                <br>
+                <label><input type="checkbox" name="add[]" value="19"> Электроснабжение</label>
+            </p>
+        </div>
+    </div>
+
+    <div class="row text-center">
+        <div class="col-xs-12">
+
+            <input class="calcSubmit" type="submit" value="Считать">
+            </form>
+    </div>
+</div>
+<p class="result" id="calc-result">Итого:<span></span></p>
+</div>

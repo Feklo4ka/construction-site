@@ -1,0 +1,115 @@
+form {
+    min-height: 350px;
+    
+    padding-top: 50px;
+}
+
+.form-control {
+    width: 300px;
+    
+}
+.exitButton {
+    margin-top: 10px;
+}
+.callback {
+    margin-top: 40px;
+}
+.callback h2{
+    color: #eeb500;
+    text-align: center;
+}
+.feedback {
+    min-height: 1500px;
+    
+}
+.feedback h2{
+    color: #eeb500;
+    text-align: center;
+}
+.feedbackCard {
+    border: 1px solid #eeb500;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+.feedbackCard span {
+    font-weight: bold;
+    padding-right: 20px;
+}
+.calc h2{
+   color: #eeb500;
+    text-align: center; 
+}
+.calc_new input {
+    margin-bottom: 10px;
+}
+.addGalleryForm {
+    margin-left: 50px;
+    
+}
+.addGalleryForm input {
+    margin: 10px;
+}
+.addGalleryForm .submit {
+    min-height: 30px;
+    width: 200px;
+    margin-top: 50px;
+    color: white;
+    background-color: #eeb500;
+    border: none;
+    margin-bottom: 20px;
+    
+}
+.addGalleryForm .submit:hover {
+    background-color: #9a9ca1;
+}
+.galleryControl img{
+    width: 350px;
+    height: 250px;
+    margin-bottom: 20px;
+}
+.galleryControl p {
+    font-weight: bold;
+}
+.galleryControl a {
+}
+.button {
+    
+    margin: 20px;
+    padding-top: 5px;
+    background-color: #eeb500;
+    border: none;
+    min-height: 30px;
+    width: 150px;
+}
+.button a {
+    color: white;
+    margin-top: 10px;
+}
+.galleryItem {
+    margin-bottom: 50px;
+    border: 1px solid grey;
+   
+}
+.editGallery {
+    margin-left: 50px;
+}
+.editGallery p{
+    font-weight: bold;
+}
+.editGallery img {
+     width: 300px;
+    margin-bottom: 20px;
+}
+.editGallery .submit {
+    min-height: 30px;
+    width: 200px;
+    margin-top: 50px;
+    color: white;
+    background-color: #eeb500;
+    border: none;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.editGallery input, select {
+    margin-bottom: 20px;
+}

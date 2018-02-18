@@ -1,0 +1,35 @@
+<div class="container-fluid">                 
+
+    <div class="row">
+        <div class="col-xs-12 img-wrap">            
+            <img src="img/services.jpg">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 col-md-offset-4 page-name">            
+            <span>Галерея</span>
+        </div>
+    </div>
+
+</div>
+
+<div class="container galleryImg">
+    <div class="row">
+        <h2><?=$galleryRow['name']?></h2>
+        <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+            <a class="fancyimage" rel="group" href="/construction/<?=$galleryRow['cover_img']?>">
+                <img class="img-responsive" src="/construction/<?=$galleryRow['cover_img']?>" />
+            </a>
+        </div>
+        <? foreach ($rowsImg as $imgItem):?>
+        <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+            <a class="fancyimage" rel="group" href="/construction/<?=$imgItem['path']?>">
+                <img class="img-responsive" src="/construction/<?=$imgItem['path']?>" />
+            </a>
+        </div>
+        <?endforeach?>
+    </div>
+</div>
+<div class="text-center back">
+    <a href="gallery">Вернуться к Галереям</a>
+</div>

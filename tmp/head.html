@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <?php foreach($meta as $name => $val):?>
+            <meta <?= $name.'="'.$val.'"'?> />
+        <?php endforeach ?>
+        <title><?php echo $title?></title>
+        <?php foreach($css as $file): ?>
+            <link rel="stylesheet" href="<?=CSS.$file ?>?_=<?= uniqid()?>"/>
+        <?php endforeach ?>
+        
+    </head>
+    <body>
+        
+

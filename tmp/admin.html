@@ -1,0 +1,43 @@
+<ul class="nav nav-tabs">
+    <li class="active"><a href="admin">Обратный звонок</a></li>
+    <li><a href="feedback">Обратная связь</a></li>
+    <li><a href="galleryControl">Управление галереей</a></li>
+    <li><a href="calc">Управление ценами</a></li>
+    <li><button class="btn btn-secondary"><a href="exit">Выход</a></button></li>
+</ul>
+
+<div class="cotainer callback">
+    <h2>Форма заказа обратного звонка</h2>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <table class="table table-hover">
+                <tr>
+                    <th>ФИО</th>
+                    <th>Телефон</th>
+                    <th>Дата</th>
+                </tr>
+                <? foreach ($callbackList as $callbackItem): ?>
+                <tr>
+                    <td><?=$callbackItem['name']?></td>
+                    <td><?=$callbackItem['phone']?></td>
+                    <td><?=$callbackItem['created_at']?></td>
+                </tr>
+                <? endforeach; ?>
+            </table>
+        </div>
+    </div>
+</div>
+
+<? if($pages > 1): ?>
+<div class="text-center">
+    <ul class="pagination">
+        <li><a href="/construction/admin?page=1">&laquo;</a></li>
+        <?for($i=1; $i<=$pages; $i++):?>
+        <li class="<?= $i===$currentPage ? 'active' : '' ?>"><a href="/construction/admin?page=<?=$i?>"><?=$i?></a></li>
+        <?endfor;?>  
+        <li><a href="/construction/admin?page=<?=$pages?>">&raquo;</a></li>
+    </ul>
+</div>
+<?endif?>
+
+

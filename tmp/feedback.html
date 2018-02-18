@@ -1,0 +1,35 @@
+<ul class="nav nav-tabs">
+    <li><a href="admin">Обратный звонок</a></li>
+    <li class="active"><a href="feedback">Обратная связь</a></li>
+    <li><a href="galleryControl">Управление галереей</a></li>
+    <li><a href="calc">Управление ценами</a></li>
+    <li><button class="btn btn-secondary"><a href="exit">Выход</a></button></li>
+</ul>
+
+<div class="container feedback">
+    <h2>Форма обратной связи</h2>
+    <div class="rows">
+        <div class="col-md-8 col-md-offset-2">
+           <? foreach ($feedbackList as $feedbackItem): ?>
+            <div class="feedbackCard">
+                
+                <p><span>Имя: </span><?=$feedbackItem['name']?></p>
+                <p><span>email: </span><?=$feedbackItem['email']?></p>
+                <p><span>Сообщение: </span><?=$feedbackItem['text']?></p>
+                <p><span>Дата: </span><?=$feedbackItem['created_at']?></p>
+            </div>
+            <? endforeach; ?>
+        </div>
+    </div>
+</div>
+<? if($pages > 1): ?>
+<div class="text-center">
+    <ul class="pagination">
+        <li><a href="/construction/feedback?page=1">&laquo;</a></li>
+        <?for($i=1; $i<=$pages; $i++):?>
+        <li class="<?= $i===$currentPage ? 'active' : '' ?>"><a href="/construction/feedback?page=<?=$i?>"><?=$i?></a></li>
+        <?endfor;?>  
+        <li><a href="/construction/feedback?page=<?=$pages?>">&raquo;</a></li>
+    </ul>
+</div>
+<?endif?>
